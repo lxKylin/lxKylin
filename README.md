@@ -1,7 +1,7 @@
 ### Hi there 👋
-欢迎来到我的github
-wechat：Liux-OS
-E-mail：liux1118@qq.com
+- 欢迎来到我的github
+- wechat：Liux-OS
+- E-mail：liux1118@qq.com
 <!--
 **liux1118/liux1118** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
