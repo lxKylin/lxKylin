@@ -1,5 +1,5 @@
 ### Hi there 👋
-欢迎来到我的github
+Welcome to my Github
 <hr>
 
 Wechat：Liux-OS
