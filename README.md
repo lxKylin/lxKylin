@@ -4,6 +4,8 @@
 Wechat：Liux-OS
 
 E-mail：liux1118@qq.com
+
+blog：https://blog.csdn.net/weixin_46926182
 <!--
 **liux1118/liux1118** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
