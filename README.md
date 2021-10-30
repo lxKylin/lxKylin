@@ -9,7 +9,7 @@ blog：https://blog.csdn.net/weixin_46926182
 
 LeedCode：https://leetcode-cn.com/u/kylinu/
 
-https://github-readme-stats.vercel.app/api?username=liux1118&hide=[%22issues%22]&show_icons=true
+![marionxue's github stats](https://github-readme-stats.vercel.app/api?username=liux1118&theme=radical)
 <!--
 **liux1118/liux1118** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
