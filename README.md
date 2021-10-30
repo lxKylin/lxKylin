@@ -1,6 +1,6 @@
 ### Hi there 👋
 欢迎来到我的github
-
+<hr>
 Wechat：Liux-OS
 
 E-mail：liux1118@qq.com
@@ -9,9 +9,9 @@ blog：https://blog.csdn.net/weixin_46926182
 
 LeedCode：https://leetcode-cn.com/u/kylinu/
 
-![liux1118's github stats](https://github-readme-stats.vercel.app/api?username=liux1118&hide=[%22issues%22]&show_icons=true) 
+<!-- ![liux1118's github stats](https://github-readme-stats.vercel.app/api?username=liux1118&hide=[%22issues%22]&show_icons=true)  -->
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=liux1118) 
+<!-- ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=liux1118)  -->
 
 <p>
 <img align="left" width="47%" src="https://github-readme-stats.vercel.app/api?username=liux1118&hide=[%22issues%22]&show_icons=true" />
