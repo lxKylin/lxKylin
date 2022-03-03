@@ -6,7 +6,6 @@ Wechat：`Liux-OS`/`17750509823`
 
 E-mail：`liux1118@qq.com`
 
-掘金：https://juejin.cn/user/4344859055106215
 
 CSDN：https://blog.csdn.net/weixin_46926182
 
