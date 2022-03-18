@@ -9,7 +9,6 @@ E-mail：`liux1118@qq.com`
 
 CSDN：https://blog.csdn.net/weixin_46926182
 
-LeetCode：https://leetcode-cn.com/u/kylinu/
 
 <!-- ![liux1118's github stats](https://github-readme-stats.vercel.app/api?username=lxKylin&hide=[%22issues%22]&show_icons=true)  -->
 
