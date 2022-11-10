@@ -2,7 +2,7 @@
 Welcome to my Github
 <hr>
 
-Wechat：`Liux-OS`/`17750409823`
+Wechat：`lxKylin_`
 
 E-mail：`liux1118@qq.com`
 
