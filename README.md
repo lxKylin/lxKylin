@@ -6,10 +6,13 @@ Welcome to my Github
 
 <!-- ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin)  -->
 
-<p>
+| <img align="center" src="https://github-readme-stats.vercel.app/api?username=lxKylin&show_icons=true&hide_border=true" alt="" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin&layout=compact&hide_border=true" alt="" /> |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+<!-- <p>
 <img align="left" width="47%" src="https://github-readme-stats.vercel.app/api?username=lxKylin&hide=[%22issues%22]&show_icons=true" />
 <img align="right" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin&layout=compact&hide=glsl" />
-</p>
+</p> -->
 <!--
 **lxKylin/lxKylin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
