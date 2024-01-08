@@ -14,3 +14,50 @@ jobs:
         # run: npm install && npm run start
         with:
           params: ${{ secrets.JUEJIN_PARAMS }}
+      - name: Create image folder
+        run: |
+          # 检测是否存在image文件夹
+          echo "Create image folder"
+          if [ ! -d "image" ]; then
+            mkdir image
+            echo "image文件夹已创建"
+          else
+            echo "image文件夹已存在"
+          fi
+      - name: Upload Card Image
+        uses: actions/upload-artifact@v2
+        with:
+          name: juejin-card.svg
+          path: image
+      - name: Download Card Image
+        uses: actions/download-artifact@v2
+        with:
+          name: juejin-card.svg
+          path: image # 指定下载到本地的路径
+      - name: Copy Card Image to Images Folder
+        run: |
+          # 在这里进行文件拷贝操作
+          if [ ! -d "images" ]; then
+            mkdir images
+            echo "images文件夹已创建"
+          else
+            echo "images文件夹已存在"
+          fi
+          mv image/*.svg ./images
+        shell: bash
+      - name: Commit and Push Changes
+        run: |
+          echo "Commit and Push Changes"
+          git remote -v
+          # git remote add origin https://github.com/lxKylin/juejin-card.git # 一直存在
+          echo "${GITHUB_ACTOR}, GITHUB_ACTOR"
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+          git add .
+          git commit -m "feat: Add Card Image"
+          # origin 是远程仓库的默认名称，而 HEAD:main 表示将本地的 HEAD 分支（通常是当前分支）推送到远程仓库的 main 分支
+          git push origin HEAD:main
+          # git push https://$GITHUB_ACTOR:$PAT@github.com/lxKylin/juejin-card.git HEAD:main
+        env:
+          GH_TOKEN: ${{ secrets.DATA_CARD_TOKEN }}
