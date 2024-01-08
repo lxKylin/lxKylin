@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use juejin-card-Action
-        uses: lxKylin/juejin-card/.github/workflows/generate-card.yml@main
+        uses: lxKylin/juejin-card/@main/.github/workflows/generate-card.yml
         # run: npm install && npm run start
         with:
           params: ${{ secrets.JUEJIN_PARAMS }}
