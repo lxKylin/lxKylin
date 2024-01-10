@@ -9,6 +9,12 @@ jobs:
   generate-card:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear cache
+        run: |
+          git submodule foreach git clean -fdx
+          git submodule update --init --recursive
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+
       - name: Use Data Card Action
         uses: lxKylin/data-card@action
         # run: npm install && npm run start
