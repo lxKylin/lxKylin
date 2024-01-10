@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use juejin-card-Action
-        uses: lxKylin/juejin-card@action
+        uses: lxKylin/data-card@action
         # run: npm install && npm run start
         with:
           github_token: ${{ secrets.DATA_CARD_TOKEN }}
