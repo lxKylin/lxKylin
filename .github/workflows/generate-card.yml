@@ -13,4 +13,4 @@ jobs:
         uses: lxKylin/data-card@action
         with:
           github_token: ${{ secrets.DATA_CARD_TOKEN }}
-          jue_jin_id: ${{ secrets.JUEJIN_PARAMS }}
+          juejin_id: ${{ secrets.JUEJIN_PARAMS }}
