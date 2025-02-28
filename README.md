@@ -13,8 +13,8 @@ Welcome to my Github
 
 <table>
   <tr>
-    <td><img align="center" src="https://github-readme-stats.vercel.app/api?username=catapultShark&show_icons=true&hide_border=true" alt="" /></td>
-    <td><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=catapultShark&layout=compact&hide_border=true" alt="" /></td>
+    <td><img align="center" src="https://github-readme-stats.vercel.app/api?username=CatapultShark&show_icons=true&hide_border=true" alt="" /></td>
+    <td><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CatapultShark&layout=compact&hide_border=true" alt="" /></td>
     <!-- <td><img src="https://4sdvg7tqbv.us.aircode.run/juejin?uid=4344859055106215&hide_border=true" alt="Kylin的掘金数据不能同步实时数据" style="zoom:100%;" align="center"/></td> -->
   </tr>
   <tr>
