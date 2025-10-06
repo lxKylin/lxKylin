@@ -29,6 +29,11 @@ jobs:
             https://github.com/vitest-dev/docs-cn/commits?author=lxKylin
             https://github.com/vitejs/docs-cn/pulls?q=is%3Apr+author%3AlxKylin
             https://github.com/element-plus/element-plus/commits?author=lxKylin
+            https://github.com/baidu/amis/pulls?q=is%3Apr+author%3AlxKylin
+            https://github.com/web-infra-dev/rsbuild/pulls?q=is%3Apr+author%3AlxKylin
+            https://github.com/vueComponent/ant-design-vue/pulls?q=is%3Apr+author%3AlxKylin
+            https://github.com/ant-design/ant-design-web3/pulls?q=is%3Apr+author%3AlxKylin
+            https://github.com/arco-design/arco-design-vue/commits?author=lxKylin
           github-token: ${{ secrets.DATA_CARD_TOKEN }}
           badge-style: 'flat'
           output-format: 'html'
@@ -54,7 +59,6 @@ jobs:
 
           > ${{ steps.stats.outputs.summary }}
 
-          *最后更新: $(date "+%Y-%m-%d %H:%M:%S")*
           <!-- PR_STATS_END -->
           EOF
 

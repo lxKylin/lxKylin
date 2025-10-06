@@ -1,3 +1,7 @@
+## Hi there 👋
+
+Welcome to my Github
+
 <!-- PR_STATS_START -->
 ## 🚀 我的开源贡献
 
@@ -10,10 +14,6 @@
 
 *最后更新: $(date "+%Y-%m-%d %H:%M:%S")*
 <!-- PR_STATS_END -->
-
-### Hi there 👋
-
-Welcome to my Github
 
 <hr>
 
