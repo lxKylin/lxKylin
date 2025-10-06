@@ -1,14 +1,12 @@
 name: Update Profile PR Stats
 
-# on:
-#   schedule:
-#     - cron: '0 6 * * 1' # 每周一早上 6 点更新
-#   workflow_dispatch:
-# 触发条件：在 push 到 main 分支后
 on:
+  schedule:
+    - cron: '0 16 * * *' # 每日北京时间晚上12点更新 (UTC+8，所以是UTC 16:00)
   push:
     branches:
       - main
+  workflow_dispatch: # 允许手动触发
 
 jobs:
   update-profile:
