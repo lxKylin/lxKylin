@@ -30,21 +30,21 @@ jobs:
             https://github.com/vitejs/docs-cn/pulls?q=is%3Apr+author%3AlxKylin
             https://github.com/element-plus/element-plus/commits?author=lxKylin
           github-token: ${{ secrets.DATA_CARD_TOKEN }}
-          badge-style: 'for-the-badge'
-          output-format: 'markdown'
+          badge-style: 'flat'
+          output-format: 'html'
 
       - name: Update Profile README
         run: |
           echo "开始更新 README.md..."
-          
+
           # 检查当前目录内容
           echo "当前目录内容:"
           ls -la
-          
+
           # 检查 README.md 是否存在标记
           echo "检查 README.md 中的标记..."
           grep -n "PR_STATS" README.md || echo "未找到标记"
-          
+
           # 创建临时文件包含新的内容
           cat > temp_stats.md << 'EOF'
           <!-- PR_STATS_START -->
@@ -53,33 +53,6 @@ jobs:
           ${{ steps.stats.outputs.badges }}
 
           > ${{ steps.stats.outputs.summary }}
-
-          ### Hi there 👋
-          Welcome to my Github
-          <hr>
-
-          <a href="https://github.com/element-plus/element-plus/commits?author=lxKylin">
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/element-plus.svg" alt="" />
-          </a>
-          <a href="https://github.com/vitest-dev/docs-cn/commits?author=lxKylin">
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/docs-cn.svg" alt="" />
-          </a>
-          <a href="https://github.com/ant-design/ant-design/commits?author=lxKylin">
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design.svg" alt="" />
-          </a>
-          <a href="https://github.com/ant-design/ant-design-web3/commits?author=lxKylin">
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design-web3.svg" alt="" />
-          </a>
-
-          <table>
-            <tr>
-              <td><img align="center" src="https://github-readme-stats.vercel.app/api?username=lxKylin&show_icons=true&hide_border=true" alt="" /></td>
-              <td><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin&layout=compact&hide_border=true" alt="" /></td>
-            </tr>
-            <tr>
-              <td><img align="center" src="./image/juejin.svg" alt="" /></td>
-            </tr>
-          </table>
 
           *最后更新: $(date "+%Y-%m-%d %H:%M:%S")*
           <!-- PR_STATS_END -->
@@ -110,7 +83,7 @@ jobs:
           }
           !in_section { print }
           ' README.md > README_new.md
-          
+
           # 检查文件是否生成成功
           if [ -f README_new.md ]; then
             echo "README_new.md 生成成功"
@@ -122,10 +95,10 @@ jobs:
             echo "ERROR: README_new.md 生成失败"
             exit 1
           fi
-          
+
           # 清理临时文件
           rm -f temp_stats.md
-          
+
           # 显示更新后的文件内容（前20行）
           echo "更新后的 README.md 前20行:"
           head -20 README.md
@@ -134,7 +107,7 @@ jobs:
         run: |
           echo "检查文件更改..."
           git status
-          
+
           # 检查是否有更改
           if git diff --quiet README.md; then
             echo "README.md 没有变化，跳过提交"
