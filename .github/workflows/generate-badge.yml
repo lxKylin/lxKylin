@@ -35,45 +35,71 @@ jobs:
 
       - name: Update Profile README
         run: |
-          # 更新 README.md 中的 PR 统计部分
-          sed -i '0,/<!-- PR_STATS_END -->/{/<!-- PR_STATS_START -->/,/<!-- PR_STATS_END -->/c\
-          <!-- PR_STATS_START -->\
-          ## 🚀 我的开源贡献\
-          \
-          ${{ steps.stats.outputs.badges }}\
-          \
-          \> ${{ steps.stats.outputs.summary }}\
-          \
-          ### Hi there 👋\
-          Welcome to my Github\
-          <hr>\
-          \
-          <a href="https://github.com/element-plus/element-plus/commits?author=lxKylin">\
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/element-plus.svg" alt="" />\
-          </a>\
-          <a href="https://github.com/vitest-dev/docs-cn/commits?author=lxKylin">\
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/docs-cn.svg" alt="" />\
-          </a>\
-          <a href="https://github.com/ant-design/ant-design/commits?author=lxKylin">\
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design.svg" alt="" />\
-          </a>\
-          <a href="https://github.com/ant-design/ant-design-web3/commits?author=lxKylin">\
-          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design-web3.svg" alt="" />\
-          </a>\
-          \
-          <table>\
-            <tr>\
-              <td><img align="center" src="https://github-readme-stats.vercel.app/api?username=lxKylin&show_icons=true&hide_border=true" alt="" /></td>\
-              <td><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin&layout=compact&hide_border=true" alt="" /></td>\
-            </tr>\
-            <tr>\
-              <td><img align="center" src="./image/juejin.svg" alt="" /></td>\
-            </tr>\
-          </table>\
-          \
-          *最后更新: $(date "+%Y-%m-%d %H:%M:%S")*\
+          # 创建临时文件包含新的内容
+          cat > temp_stats.md << 'EOF'
+          <!-- PR_STATS_START -->
+          ## 🚀 我的开源贡献
+
+          ${{ steps.stats.outputs.badges }}
+
+          > ${{ steps.stats.outputs.summary }}
+
+          ### Hi there 👋
+          Welcome to my Github
+          <hr>
+
+          <a href="https://github.com/element-plus/element-plus/commits?author=lxKylin">
+          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/element-plus.svg" alt="" />
+          </a>
+          <a href="https://github.com/vitest-dev/docs-cn/commits?author=lxKylin">
+          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/docs-cn.svg" alt="" />
+          </a>
+          <a href="https://github.com/ant-design/ant-design/commits?author=lxKylin">
+          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design.svg" alt="" />
+          </a>
+          <a href="https://github.com/ant-design/ant-design-web3/commits?author=lxKylin">
+          <img align="center" src="https://raw.githubusercontent.com/lxKylin/lxKylin/svg/ant-design-web3.svg" alt="" />
+          </a>
+
+          <table>
+            <tr>
+              <td><img align="center" src="https://github-readme-stats.vercel.app/api?username=lxKylin&show_icons=true&hide_border=true" alt="" /></td>
+              <td><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxKylin&layout=compact&hide_border=true" alt="" /></td>
+            </tr>
+            <tr>
+              <td><img align="center" src="./image/juejin.svg" alt="" /></td>
+            </tr>
+          </table>
+
+          *最后更新: $(date "+%Y-%m-%d %H:%M:%S")*
           <!-- PR_STATS_END -->
-          }' README.md
+          EOF
+
+          # 使用 awk 替换 README.md 中指定部分的内容
+          awk '
+          BEGIN { in_section = 0; found_start = 0 }
+          /<!-- PR_STATS_START -->/ {
+            if (!found_start) {
+              found_start = 1
+              in_section = 1
+              while ((getline line < "temp_stats.md") > 0) {
+                print line
+              }
+              close("temp_stats.md")
+              next
+            }
+          }
+          /<!-- PR_STATS_END -->/ {
+            if (in_section) {
+              in_section = 0
+              next
+            }
+          }
+          !in_section { print }
+          ' README.md > README_new.md && mv README_new.md README.md
+
+          # 清理临时文件
+          rm -f temp_stats.md
 
       - name: Commit and Push
         run: |
