@@ -1,5 +1,10 @@
+<!-- PR_STATS_START -->
+<!-- PR_STATS_END -->
+
 ### Hi there 👋
+
 Welcome to my Github
+
 <hr>
 
 <a href="https://github.com/element-plus/element-plus/commits?author=lxKylin">
