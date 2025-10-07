@@ -51,7 +51,7 @@ jobs:
           # 创建临时文件包含新的内容
           cat > temp_stats.md << 'EOF'
           <!-- PR_STATS_START -->
-          ## 🚀 我的开源贡献
+          ### 我的开源贡献（由 [repo-contribution-count-action](https://github.com/lxKylin/repo-contribution-count-action) 生成）
 
           ${{ steps.stats.outputs.badges }}
 
