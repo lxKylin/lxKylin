@@ -3,7 +3,7 @@
 Welcome to my Github
 
 <!-- PR_STATS_START -->
-## 🚀 我的开源贡献
+### 我的开源贡献（由 [repo-contribution-count-action](https://github.com/lxKylin/repo-contribution-count-action) 生成）
 
 <img src="https://img.shields.io/static/v1?label=Total+commits&message=114+in+8+repos&color=red&style=flat" alt="Total commits">
 <a href="https://github.com/vitejs/docs-cn"><img src="https://img.shields.io/static/v1?label=vitejs%2Fdocs-cn&message=31+commits&color=orange&style=flat" alt="vitejs/docs-cn commits"></a>
