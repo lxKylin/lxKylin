@@ -32,6 +32,7 @@ jobs:
             https://github.com/vueComponent/ant-design-vue/pulls?q=is%3Apr+author%3AlxKylin
             https://github.com/ant-design/ant-design-web3/pulls?q=is%3Apr+author%3AlxKylin
             https://github.com/arco-design/arco-design-vue/commits?author=lxKylin
+            https://github.com/bytedance/flowgram.ai/commits?author=lxKylin
           github-token: ${{ secrets.DATA_CARD_TOKEN }}
           badge-style: 'flat'
           output-format: 'html'
