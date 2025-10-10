@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate PR Statistics
         id: stats
-        uses: lxKylin/repo-contribution-count-action@main
+        uses: lxKylin/repo-contribution-count-action@v1.1.0
         with:
           pr-links: |
             https://github.com/vitejs/docs-cn/commits?author=lxKylin
