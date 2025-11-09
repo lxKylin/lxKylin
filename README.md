@@ -5,8 +5,8 @@ Welcome to my Github
 <!-- PR_STATS_START -->
 ### 我的开源贡献（由 [repo-contribution-count-action](https://github.com/lxKylin/repo-contribution-count-action) 生成）
 
-<img src="https://img.shields.io/static/v1?label=Total+commits&message=154+in+9+repos&color=red&style=flat" alt="Total commits">
-<a href="https://github.com/vitest-dev/docs-cn"><img src="https://img.shields.io/static/v1?label=vitest-dev%2Fdocs-cn&message=80+commits&color=red&style=flat" alt="vitest-dev/docs-cn commits"></a>
+<img src="https://img.shields.io/static/v1?label=Total+commits&message=158+in+9+repos&color=red&style=flat" alt="Total commits">
+<a href="https://github.com/vitest-dev/docs-cn"><img src="https://img.shields.io/static/v1?label=vitest-dev%2Fdocs-cn&message=84+commits&color=red&style=flat" alt="vitest-dev/docs-cn commits"></a>
 <a href="https://github.com/vitejs/docs-cn"><img src="https://img.shields.io/static/v1?label=vitejs%2Fdocs-cn&message=40+commits&color=orange&style=flat" alt="vitejs/docs-cn commits"></a>
 <a href="https://github.com/element-plus/element-plus"><img src="https://img.shields.io/static/v1?label=element-plus%2Felement-plus&message=17+commits&color=yellow&style=flat" alt="element-plus/element-plus commits"></a>
 <a href="https://github.com/ant-design/ant-design-web3"><img src="https://img.shields.io/static/v1?label=ant-design%2Fant-design-web3&message=5+commits&color=green&style=flat" alt="ant-design/ant-design-web3 commits"></a>
@@ -16,7 +16,7 @@ Welcome to my Github
 <a href="https://github.com/arco-design/arco-design-vue"><img src="https://img.shields.io/static/v1?label=arco-design%2Farco-design-vue&message=2+commits&color=green&style=flat" alt="arco-design/arco-design-vue commits"></a>
 <a href="https://github.com/web-infra-dev/rsbuild"><img src="https://img.shields.io/static/v1?label=web-infra-dev%2Frsbuild&message=1+commits&color=green&style=flat" alt="web-infra-dev/rsbuild commits"></a>
 
-> 总计在 9 个仓库中创建了 154 个 commits
+> 总计在 9 个仓库中创建了 158 个 commits
 
 <!-- PR_STATS_END -->
 
